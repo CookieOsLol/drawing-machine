@@ -15,14 +15,13 @@ img3 = loadImage('assets/bh3.png');
 img = loadImage('assets/td.png');
 soundFormats('mp3','ogg');
 mySound = loadSound('assets/gun');
-
+recoil = 60
 }
 
 function setup() {
   createCanvas(windowWidth,windowHeight);
   background(154,130,64);
 image(img,400,10,1000,1000);
-recoil = random(40,150);
 }
 
 function draw() {
@@ -32,9 +31,8 @@ function draw() {
 
 function mouseClicked(){
 //image(img2,mouseX-60,mouseY-50,150,150);
-image(img4,mouseX -60,mouseY-50,150,150);
+image(img4,mouseX -(recoil+(random(-5,10))),mouseY-(recoil+(random(-5,10))),170,170);
 mySound.play();
-
   //opposite ->    //line(width -mouseX, height -mouseY,width -pmouseX,height-pmouseY);
   //background(220,50,133,5);
 //strokeWeight(strokeWidth);
@@ -44,9 +42,9 @@ mySound.play();
 //stroke(map(mouseX, 0, 600, 0, 255,true))
 //line(width - mouseX, height - mouseY, width - pmouseX, height - pmouseY);
 //line(mouseX, mouseY, pmouseX, pmouseY);
-
-
 }
+
+
 
 function keyTyped(){
 
@@ -57,7 +55,7 @@ function keyTyped(){
 //clear the images
 clear();
 background(154,130,64);
-image(img4,400,10,1000,1000);
+image(img,400,10,1000,1000);
 
   }
 
