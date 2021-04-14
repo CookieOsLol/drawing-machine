@@ -9,16 +9,16 @@ let cnv;
 
 
 function preload(){
-img = loadImage('assets/bh1.png');
+img4 = loadImage('assets/bh1.png');
 img2 = loadImage('assets/bh2.png');
 img3 = loadImage('assets/bh3.png');
-img4 = loadImage('assets/td.png');
+img = loadImage('assets/td.png');
 }
 
 function setup() {
   createCanvas(windowWidth,windowHeight);
   background(154,130,64);
-image(img4,400,10,1000,1000);
+image(img,400,10,1000,1000);
 recoil = random(40,150);
 }
 
@@ -29,7 +29,7 @@ function draw() {
 
 function mouseClicked(){
 //image(img2,mouseX-60,mouseY-50,150,150);
-image(img2,mouseX -60,mouseY-50,150,150);
+image(img4,mouseX -60,mouseY-50,150,150);
 
   //opposite ->    //line(width -mouseX, height -mouseY,width -pmouseX,height-pmouseY);
   //background(220,50,133,5);
