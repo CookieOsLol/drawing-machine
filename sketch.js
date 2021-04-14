@@ -35,7 +35,7 @@ function draw() {
 
 function mouseClicked(){
 //image(img2,mouseX-60,mouseY-50,150,150);
-image(img3,mouseX -(recoil+(random(-5,10))),mouseY-(recoil+(random(-5,10))),random(100,140),random(100,140));
+image(img3,mouseX -(recoil+(random(-5,5))),mouseY-(recoil+(random(-20,0))),random(100,140),random(100,140));
 mySound.play();
 
   //opposite ->    //line(width -mouseX, height -mouseY,width -pmouseX,height-pmouseY);
