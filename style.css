@@ -3,7 +3,9 @@ html{
   padding: 0;
 }
 
-
+h1 {
+  letter-spacing: 15px;
+}
 
 body {
 magin :100px auto 0 auto;
