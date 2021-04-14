@@ -29,21 +29,13 @@ flash1 = new flash(0);
 }
 
 function draw() {
-x = 0;
-squareColor = color(255);
-squareColor.setAlpha(x);
-noStroke();
-fill(squareColor);
-rect(0,0,10000,10000);
-
-
   cnv.mouseClicked(mouseClicked);
 
 }
 
 function mouseClicked(){
 //image(img2,mouseX-60,mouseY-50,150,150);
-image(img3,mouseX -(recoil+(random(-5,10))),mouseY-(recoil+(random(-5,10))),120,120);
+image(img3,mouseX -(recoil+(random(-5,10))),mouseY-(recoil+(random(-5,10))),random(100,140),random(100,140));
 mySound.play();
 
   //opposite ->    //line(width -mouseX, height -mouseY,width -pmouseX,height-pmouseY);
