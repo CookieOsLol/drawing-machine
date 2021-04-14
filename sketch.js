@@ -1,26 +1,46 @@
+let noiseOffset = 0.0;
+let strokeWidth = 5;
+
+
 function setup() {
-  createCanvas(400, 400);
-  background(220);
-  strokeWeight(15);
+  createCanvas(windowWidth,windowHeight);
+  background(220,50,133);
 }
 
 function draw() {
-  if (mouseIsPressed){
-  line(mouseX, mouseY, pmouseX,pmouseY);
+//  if (mouseIsPressed){
+//  line(mouseX, mouseY, pmouseX,pmouseY);
   //opposite ->    //line(width -mouseX, height -mouseY,width -pmouseX,height-pmouseY);
+  background(220,50,133,5);
 
-  }
+strokeWeight(strokeWidth);
+
+
+
+//noiseOffset = noiseOffset + 0.01;
+noiseOffset += 0.05;
+strokeWidth = noise(noiseOffset) * 100;
+
+
+stroke(map(mouseX, 0, 600, 0, 255,true))
+line(width - mouseX, height - mouseY, width - pmouseX, height - pmouseY);
+line(mouseX, mouseY, pmouseX, pmouseY);
 }
 
 
-function savePng(){
-  
+function keyTyped(){
+
   if ( key === 's'){
     //save this image
-    saveCanvas('fileName','png')
-    
+    saveCanvas('fileName','png');
+  } else if (key === 'c'){
+//clear the images
+clear();
+
+
   }
-  return false 
-  
-  
+
+  return false
+
+
 }
