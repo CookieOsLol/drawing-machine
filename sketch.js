@@ -34,6 +34,7 @@ function mouseClicked(){
 //image(img2,mouseX-60,mouseY-50,150,150);
 image(img4,mouseX -60,mouseY-50,150,150);
 mySound.play();
+
   //opposite ->    //line(width -mouseX, height -mouseY,width -pmouseX,height-pmouseY);
   //background(220,50,133,5);
 //strokeWeight(strokeWidth);
