@@ -6,13 +6,16 @@ let img3;
 let img4;
 let recoil;
 let cnv;
-
+let mySound;
 
 function preload(){
 img4 = loadImage('assets/bh1.png');
 img2 = loadImage('assets/bh2.png');
 img3 = loadImage('assets/bh3.png');
 img = loadImage('assets/td.png');
+soundFormats('mp3','ogg');
+mySound = loadSound('assets/gun');
+
 }
 
 function setup() {
@@ -30,7 +33,7 @@ function draw() {
 function mouseClicked(){
 //image(img2,mouseX-60,mouseY-50,150,150);
 image(img4,mouseX -60,mouseY-50,150,150);
-
+mySound.play();
   //opposite ->    //line(width -mouseX, height -mouseY,width -pmouseX,height-pmouseY);
   //background(220,50,133,5);
 //strokeWeight(strokeWidth);
